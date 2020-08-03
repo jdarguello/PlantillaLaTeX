@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}
+\contentsline {section}{Introducci\'on}{2}{section*.3}%
+\contentsline {section}{\numberline {1}Sistema de molienda}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}An\'alsis cinem\'atico}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Impacto}{7}{subsection.1.2}%
+\contentsline {section}{\numberline {2}\textit {M\'etodo de elementos discretos} - DEM}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Detecci\'on de una colici\'on}{9}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Simulaci\'on num\'erica}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Primera iteraci\'on}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Segunda iteraci\'on}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Tercera iteraci\'on}{15}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Resultado}{17}{section.4}%
+\contentsline {section}{\numberline {5}An\'alisis de resultados y conclusiones}{18}{section.5}%

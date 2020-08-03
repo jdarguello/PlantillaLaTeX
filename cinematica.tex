@@ -1,0 +1,177 @@
+\subsection{An\'alsis cinem\'atico} \label{cinema}
+
+\noindent
+\justify
+
+La trayectoria de las bolas es uno de los par\'ametros que determina la eficiencia del proceso de trituraci\'on, debido a la magnitud de la fuerza y posici\'on del impacto. Este se trata de un an\'alisis simplificado, se desprecia el di\'ametro y el coeficiente de fricci\'on de las bolas, entre otros par\'ametros, como se aprecia en la Figura \ref{simplify}.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}	
+	\draw (0,0) circle (3cm);
+	\draw[arrows={-Triangle[angle=90:2.5pt,black,fill=black]}] (2.1, 2.1) -- (1.5,2.8) node[text width=1mm, above] {$\overrightarrow{V_0}$};	
+	\draw[arrows={-Triangle[angle=90:2.5pt,black,fill=black]}] (2.1,2.1) -- (1,2.1) node[text width=1mm, left=3mm] {$V_{0x}$};
+	\draw[arrows={-Triangle[angle=90:2.5pt,black,fill=black]}] (2.1,2.1) -- (2.1,2.5) node[text width=1mm, above] {$V_{0y}$};
+	\node at (1.6, 2.3) {$\phi$};
+	
+	%Nomenclatura
+	\draw[arrows={-Triangle[angle=90:2.5pt,black,fill=black]}] (0,0) -- (0,1) node[above] {$y$};
+	\draw[arrows={-Triangle[angle=90:2.5pt,black,fill=black]}] (0,0) -- (-1,0) node[above] {$x$}; 
+	\draw[arrows={-Triangle[angle=90:2.5pt,black,fill=black]}] (3.4,1) -- (3.4,0) node[below] {$\overrightarrow{g}$}; 
+	
+	
+	
+	\draw[fill=blue] (2.05,2.05) circle (1mm);
+	%\draw[dotted, green!50!red] (2.1, 2.1) -- (-2.1, -2.1);
+	\draw[dashed] plot [smooth] coordinates { ( 2.1,2.1) (1.5,1.9) (0, 1) (-1.5,-1.4) (-2,-2) };
+	\draw[dotted, blue] (-2.05,-2.05) circle (1mm);
+	\draw[red!40!yellow, arrows={-Triangle[angle=90:5pt,red!40!yellow,fill=red!40!yellow]}] (0,3.4) arc(90:120:4.5) node [midway, above] {$\overrightarrow{\omega}$};
+	
+	\draw[arrows={-Triangle[angle=90:4pt,black,fill=black]}] (0,0) -- (2,2) node[text width=1mm, below] {$\vec{r_0}$};
+	
+	
+\end{tikzpicture}
+\caption{Cinem\'atica de una bola (an\'alisis simplificado).}
+\label{simplify}
+\end{figure}
+
+\noindent
+\justify
+
+De la Figura \ref{simplify}, $\vec{V_0}$ es la velocidad inicial, $\phi$ es el \'angulo en el que se distribuye el material a triturar durante el funcionamiento del molino, $\omega$ es la velocidad angular, $\vec{r_0}$ es el vector posici\'on inicial y $\vec{g}$ es el vector aceleraci\'on de la gravedad.
+
+\noindent
+\justify
+
+Sabiendo que el valor de la aceleraci\'on en la componente vertical $a_y$ es la gravedad y asumiendo que la aceleraci\'on horizontal tiene un valor constante, e igual a cero $\left( a_x = 0 \right)$, se tiene lo siguiente:
+
+\begin{equation}
+\vec{a} = -g \hat{j}
+\end{equation}
+
+\noindent
+\justify
+
+Sabiendo que la aceleraci\'on es la variaci\'on de la velocidad con respecto al tiempo, se tiene que:
+
+\begin{equation}
+\vec{V} = V_{0x} \hat{i} + \left(V_{0y} - gt \right) \hat{j}
+\end{equation}
+
+\noindent
+\justify
+
+De igual manera, siendo la velocidad la variaci\'on de la posici\'on con respecto al tiempo:
+
+\begin{equation}
+\vec{r} = \left(-x_0 + V_{0x} t \right) \hat{i} + \left(y_0 + V_{0y}t - \frac{g t^2}{2} \right) \hat{j}
+\end{equation}
+
+\noindent
+\justify
+
+La velocidad angular $\omega$ tiene un valor de $3.93 \left(rev /s \right)$ y el radio del molino $r$ es de $0.4065 [m]$, de modo que el valor de la velocidad inicial es de $1.6 [m/s]$. Para una trituraci\'on \'optima, se requiere que el \'angulo de distribuci\'on sea de $45 \degree$, de modo que:
+
+\begin{equation*}
+V_{0x} = V_0 \cos \phi \rightarrow V_{0x} = 1.13 [m/s]
+\end{equation*}
+
+\begin{equation*}
+V_{0y} = V_0 \sin \phi \rightarrow V_{0y} = 1.13 [m/s]
+\end{equation*}
+
+\begin{equation}
+\vec{V_0} = 1.13 \hat{i} + 1.13 \hat{j} [m/s]
+\label{velocidad}
+\end{equation}
+
+\noindent
+\justify
+
+De igual manera, el vector posici\'on inicial queda de la siguiente forma:
+
+\begin{equation*}
+x_{0} = r_0 \cos \phi \rightarrow x_{0} = 0.29 [m]
+\end{equation*}
+
+\begin{equation*}
+y_{0} = r_0 \sin \phi \rightarrow y_{0} = 0.29 [m]
+\end{equation*}
+
+\begin{equation}
+\vec{r_0} = 0.29 \hat{i} + 0.29 \hat{j} [m]
+\label{posicion}
+\end{equation}
+
+\noindent
+\justify
+
+Para definir la trayectoria del material dentro del molino, es necesario conocer el tiempo que tarda en realizar su recorrido. Para conocer el tiempo, se debe conocer la posici\'on en donde cae.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+	\draw[arrows={-Triangle[angle=90:4pt,black,fill=black]}] (0,-3) -- (0,3) node[left] {$y$};
+	\draw[arrows={-Triangle[angle=90:4pt,black,fill=black]}]  (-3,0) -- (3,0) node[below] {$x$};
+	\draw[fill=blue] (2.1,-2.1) circle (0.5mm);
+	\draw[fill=blue] (-2.1,2.1) circle (0.5mm);
+	
+	\draw[dashed, blue!60] (-2.05,2.05) -- (2.05,-2.05) arc(-45:-78:3) -- (0,-2.4) -- (-0.55,-2.85) arc(-102:-168:3) -- (-2.4,0) -- (-2.85,0.55) arc(-192:-225:3) -- cycle;
+	\node[below=3mm] at (2.1,-2.1) {$\left(x_f, y_f \right)$};
+	\node[above=1mm] at (-2.1,2.1) {$\left(x_0, y_0 \right)$};
+	
+	\draw[<-] (-1,0) arc(180:135:1);	
+	\node[left] at (-1,0.5) {$\phi$};
+\end{tikzpicture}
+\caption{Tendencia de distribuci\'on del material.}
+\label{dist}
+\end{figure}
+
+\noindent
+\justify
+
+De la Figura \ref{dist}, la distribuci\'on del material est\'a dada por la siguiente relaci\'on matem\'atica:
+
+\begin{equation}
+y \left(t_f \right) = -\tan \phi \, x_f \, t_f
+\label{tiempo}
+\end{equation}
+
+\noindent
+\justify
+
+Relacionando las Ecuaciones \ref{posicion} y \ref{tiempo}, se obtiene:
+
+\begin{equation}
+t_f ^2 - \frac{2 \left(V_{0y} + V_{0x} \tan \phi \right)}{g} t_f - \frac{2}{g} \left( y_0 - x_0 \tan \phi \right) = 0
+\label{tf}
+\end{equation}
+
+\noindent
+\justify
+
+Relacionando las Ecuaciones \ref{velocidad}, \ref{posicion} y \ref{tf} $t_f$ toma valores de $-0.14 [s]$ y $0.43 [s]$; de modo que una bola llega al punto de impacto en \textbf{\boldsymbol{$0.43 [s]$}}. La relaci\'on entre la posici\'on vertical $y$ con respecto a la posici\'on horizontal $x$ se puede apreciar en la Ecuaci\'on \ref{yx}.
+
+\begin{equation}
+y (x) = r \sin \phi + \left(r + \frac{x}{\cos \phi} \right) \sin \phi - \frac{g \left(r + \frac{x}{\cos \phi} \right) ^2}{2 \omega ^2 r^2}
+\label{yx}
+\end{equation}
+
+\noindent
+\justify
+
+La posici\'on de una bola durante la etapa de molienda se puede observar en la Figura \ref{yxgraph}.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[grid = both, minor tick num=2,
+			title = \textbf{Trayectoria de una bola},
+			xlabel = {$x [m]$},
+			ylabel = {$y [m]$}]
+	\addplot file {xy.txt};
+	\end{axis}
+\end{tikzpicture}
+\caption{Trayectoria de una bola sobre el molino.}
+\label{yxgraph}
+\end{figure}

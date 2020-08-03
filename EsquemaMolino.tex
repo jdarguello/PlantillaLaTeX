@@ -1,0 +1,35 @@
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+	%Molino
+	\draw (0,0) circle (3.1cm);
+	\draw[dashed, blue!50] (0,-4) -- (0,-2.5);
+	\draw[dashed, blue!50] (0,0) -- (0,4);
+	\draw[dashed, blue!50] (-4,0) -- (0,0);
+	\draw[dashed, blue!50] (2.5,0) -- (4,0);
+	\draw (-0.51,2.945) arc(-260:-190:3);
+	\draw[red] (-0.51,2.945) -- (0,2.5) -- (0.51,2.945);
+	\draw[red] (-2.945,0.51) -- (-2.5,0) -- (-2.945, -0.51);
+	\draw (-2.945, -0.51) arc(-170:-100:3);
+	\draw[red] (-0.51,-2.945) -- (0,-2.5) -- (0.51,-2.945);
+	\draw (0.51, -2.945) arc(-80:-10:3);
+	\draw[red] (2.945,0.51) -- (2.5,0) -- (2.945, -0.51);
+	\draw (2.945,0.51) arc(10:80:3);
+	
+	\draw[blue!50!red, arrows={-Triangle[angle=90:5pt,blue!50!red,fill=blue!50!red]}] (3.4,0.8) arc(20:60:4.5) node [midway, above=2.6mm, right=0.2mm] {$\overrightarrow{T}$};
+	
+	%División volumétrica
+	\draw[dashed, step=0.5cm, blue!60!green, pattern=north west lines, pattern color=blue!60!green] (-2.05,-2.05) -- (2.05,2.05) arc(45:12:3) -- (2.4, 0) -- (2.85,-0.55) arc(-12:-78:3) -- (0,-2.4) -- (-0.55,-2.85) arc(-102:-135:3) -- cycle;
+	
+	%Bolas
+	\draw[dashed] plot [smooth] coordinates { (2.05,2.05) (1,2) (-1,1) (-2,-0.8) (-2.05,-2.05) };
+	\draw[fill=blue!70!black] (-1,1) circle (1.2mm);
+	\draw[blue!70!black, arrows={-Triangle[angle=90:3pt,blue!70!black,fill=blue!70!black]}] (-1,1) -- (-1,0.5) node [black, text width=0.5cm, below=0mm] {$m_2 \overrightarrow{g}$};
+	\draw[fill=red!40!blue] (-2,-0.8) circle (1.5mm);
+	\draw[red!40!blue, arrows={-Triangle[angle=90:3pt,red!40!blue,fill=red!40!blue]}] (-2,-0.8) -- (-2,-1.2) node [black, text width=0.5cm, below=-2mm] {$m_3 \overrightarrow{g}$};
+	\draw[fill=green!50!red] (1,2) circle (0.8mm);
+	\draw[green!50!red, arrows={-Triangle[angle=90:3pt,green!50!red,fill=green!50!red]}] (1,2) -- (1,1.6) node [black, text width=0.5cm, below=-2mm] {$m_1 \overrightarrow{g}$};
+\end{tikzpicture}
+\caption{Din\'amica interna del molino.}
+\label{aletas}
+\end{figure}
